@@ -1,0 +1,32 @@
+﻿.panel_row
+{
+	height:45px;
+}
+
+.col-right
+{
+	font-size: 13px;
+	text-align:right;
+}
+
+.rd-padding
+{
+	margin-bottom:10px;
+}
+
+.control_font
+{
+	font-size:13px;
+}
+
+.Trolley-table-tr{
+    background-color:#eee;
+    color:black;
+    font-size:13px;
+    
+}
+
+.Trolley-table-th{
+    vertical-align:central;
+    text-align:center;
+}

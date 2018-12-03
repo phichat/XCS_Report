@@ -1,0 +1,502 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8B155B86-FFDA-488B-91F9-4F8B6085FC2C}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>XCS_Report</RootNamespace>
+    <AssemblyName>XCS_Report</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>XCS_Report.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>XCS_Report.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Web, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\WINDOWS\assembly\GAC_MSIL\CrystalDecisions.Web\10.5.3700.0__692fbea5521e1304\CrystalDecisions.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\css\bootstrap.css" />
+    <Content Include="assets\css\bootstrap.min.css" />
+    <Content Include="assets\css\demo.css" />
+    <Content Include="assets\css\main.css" />
+    <Content Include="assets\img\Airports_of_Thailand_Logo.png" />
+    <Content Include="assets\img\apple-icon.png" />
+    <Content Include="assets\img\favicon.png" />
+    <Content Include="assets\img\login-bg.jpg" />
+    <Content Include="assets\img\logo-dark.png" />
+    <Content Include="assets\img\profile-bg.png" />
+    <Content Include="assets\img\user-medium.png" />
+    <Content Include="assets\img\user.png" />
+    <Content Include="assets\img\user1.png" />
+    <Content Include="assets\img\user2.png" />
+    <Content Include="assets\img\user3.png" />
+    <Content Include="assets\img\user4.png" />
+    <Content Include="assets\img\user5.png" />
+    <Content Include="assets\scripts\klorofil-common.js" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="assets\vendor\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="assets\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="assets\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="assets\vendor\bootstrap\js\npm.js" />
+    <Content Include="assets\vendor\chartist\css\chartist-custom.css" />
+    <Content Include="assets\vendor\chartist\css\chartist.css" />
+    <Content Include="assets\vendor\chartist\css\chartist.min.css" />
+    <Content Include="assets\vendor\chartist\js\chartist.js" />
+    <Content Include="assets\vendor\chartist\js\chartist.min.js" />
+    <Content Include="assets\vendor\font-awesome\css\font-awesome.css" />
+    <Content Include="assets\vendor\font-awesome\css\font-awesome.min.css" />
+    <Content Include="assets\vendor\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="assets\vendor\jquery-slimscroll\jquery.slimscroll.js" />
+    <Content Include="assets\vendor\jquery-slimscroll\jquery.slimscroll.min.js" />
+    <Content Include="assets\vendor\jquery.easy-pie-chart\angular.easypiechart.js" />
+    <Content Include="assets\vendor\jquery.easy-pie-chart\angular.easypiechart.min.js" />
+    <Content Include="assets\vendor\jquery.easy-pie-chart\easypiechart.js" />
+    <Content Include="assets\vendor\jquery.easy-pie-chart\easypiechart.min.js" />
+    <Content Include="assets\vendor\jquery.easy-pie-chart\jquery.easypiechart.js" />
+    <Content Include="assets\vendor\jquery.easy-pie-chart\jquery.easypiechart.min.js" />
+    <Content Include="assets\vendor\jquery\jquery.js" />
+    <Content Include="assets\vendor\jquery\jquery.min.js" />
+    <Content Include="assets\vendor\linearicons\fonts\Linearicons-Free.svg" />
+    <Content Include="assets\vendor\linearicons\style.css" />
+    <Content Include="assets\vendor\toastr\toastr.css" />
+    <Content Include="assets\vendor\toastr\toastr.js" />
+    <Content Include="assets\vendor\toastr\toastr.min.css" />
+    <Content Include="assets\vendor\toastr\toastr.min.js" />
+    <Content Include="Default.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Code\class\UtillDB.vb" />
+    <Content Include="App_Code\ServiceCenter\SC_Legislation.vb" />
+    <Content Include="css\AccountStyle.css" />
+    <Content Include="css\bootstrap\3.1.1\css\bootstrap.min.css" />
+    <Content Include="css\jPaginate.css" />
+    <Content Include="css\PlanStyle.css" />
+    <Content Include="css\Style1.css" />
+    <Content Include="datetimepicker\bootstrap-3.3.7-dist\css\bootstrap-theme.css" />
+    <Content Include="datetimepicker\bootstrap-3.3.7-dist\css\bootstrap-theme.min.css" />
+    <Content Include="datetimepicker\bootstrap-3.3.7-dist\css\bootstrap.css" />
+    <Content Include="datetimepicker\bootstrap-3.3.7-dist\css\bootstrap.min.css" />
+    <Content Include="datetimepicker\bootstrap-3.3.7-dist\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="datetimepicker\bootstrap-3.3.7-dist\js\bootstrap.js" />
+    <Content Include="datetimepicker\bootstrap-3.3.7-dist\js\bootstrap.min.js" />
+    <Content Include="datetimepicker\bootstrap-3.3.7-dist\js\npm.js" />
+    <Content Include="datetimepicker\dist\css\bootstrap-datepicker.css" />
+    <Content Include="datetimepicker\dist\css\bootstrap-datepicker.min.css" />
+    <Content Include="datetimepicker\dist\css\bootstrap-datepicker.standalone.css" />
+    <Content Include="datetimepicker\dist\css\bootstrap-datepicker.standalone.min.css" />
+    <Content Include="datetimepicker\dist\css\bootstrap-datepicker3.css" />
+    <Content Include="datetimepicker\dist\css\bootstrap-datepicker3.min.css" />
+    <Content Include="datetimepicker\dist\css\bootstrap-datepicker3.standalone.css" />
+    <Content Include="datetimepicker\dist\css\bootstrap-datepicker3.standalone.min.css" />
+    <Content Include="datetimepicker\dist\js\bootstrap-datepicker-custom.js" />
+    <Content Include="datetimepicker\dist\js\bootstrap-datepicker.js" />
+    <Content Include="datetimepicker\dist\js\bootstrap-datepicker.min.js" />
+    <Content Include="datetimepicker\dist\locales\bootstrap-datepicker.ar-tn.min.js" />
+    <Content Include="datetimepicker\dist\locales\bootstrap-datepicker.ar.min.js" />
+    <Content Include="datetimepicker\dist\locales\bootstrap-datepicker.az.min.js" />
+    <Content Include="datetimepicker\dist\locales\bootstrap-datepicker.bg.min.js" />
+    <Content Include="datetimepicker\dist\locales\bootstrap-datepicker.br.min.js" />
+    <Content Include="datetimepicker\dist\locales\bootstrap-datepicker.bs.min.js" />
+    <Content Include="datetimepicker\dist\locales\bootstrap-datepicker.ca.min.js" />
+    <Content Include="datetimepicker\dist\locales\bootstrap-datepicker.cs.min.js" />
+    <Content Include="datetimepicker\dist\locales\bootstrap-datepicker.cy.min.js" />
+    <Content Include="datetimepicker\dist\locales\bootstrap-datepicker.da.min.js" />
+    <Content Include="datetimepicker\dist\locales\bootstrap-datepicker.de.min.js" />
+    <Content Include="datetimepicker\dist\locales\bootstrap-datepicker.el.min.js" />
+    <Content Include="datetimepicker\dist\locales\bootstrap-datepicker.en-AU.min.js" />
+    <Content Include="datetimepicker\dist\locales\bootstrap-datepicker.en-GB.min.js" />
+    <Content Include="datetimepicker\dist\locales\bootstrap-datepicker.en-IE.min.js" />
+    <Content Include="datetimepicker\dist\locales\bootstrap-datepicker.en-NZ.min.js" />
+    <Content Include="datetimepicker\dist\locales\bootstrap-datepicker.en-ZA.min.js" />
+    <Content Include="datetimepicker\dist\locales\bootstrap-datepicker.eo.min.js" />
+    <Content Include="datetimepicker\dist\locales\bootstrap-datepicker.es.min.js" />
+    <Content Include="datetimepicker\dist\locales\bootstrap-datepicker.et.min.js" />
+    <Content Include="datetimepicker\dist\locales\bootstrap-datepicker.eu.min.js" />
+    <Content Include="datetimepicker\dist\locales\bootstrap-datepicker.fa.min.js" />
+    <Content Include="datetimepicker\dist\locales\bootstrap-datepicker.fi.min.js" />
+    <Content Include="datetimepicker\dist\locales\bootstrap-datepicker.fo.min.js" />
+    <Content Include="datetimepicker\dist\locales\bootstrap-datepicker.fr-CH.min.js" />
+    <Content Include="datetimepicker\dist\locales\bootstrap-datepicker.fr.min.js" />
+    <Content Include="datetimepicker\dist\locales\bootstrap-datepicker.gl.min.js" />
+    <Content Include="datetimepicker\dist\locales\bootstrap-datepicker.he.min.js" />
+    <Content Include="datetimepicker\dist\locales\bootstrap-datepicker.hr.min.js" />
+    <Content Include="datetimepicker\dist\locales\bootstrap-datepicker.hu.min.js" />
+    <Content Include="datetimepicker\dist\locales\bootstrap-datepicker.hy.min.js" />
+    <Content Include="datetimepicker\dist\locales\bootstrap-datepicker.id.min.js" />
+    <Content Include="datetimepicker\dist\locales\bootstrap-datepicker.is.min.js" />
+    <Content Include="datetimepicker\dist\locales\bootstrap-datepicker.it-CH.min.js" />
+    <Content Include="datetimepicker\dist\locales\bootstrap-datepicker.it.min.js" />
+    <Content Include="datetimepicker\dist\locales\bootstrap-datepicker.ja.min.js" />
+    <Content Include="datetimepicker\dist\locales\bootstrap-datepicker.ka.min.js" />
+    <Content Include="datetimepicker\dist\locales\bootstrap-datepicker.kh.min.js" />
+    <Content Include="datetimepicker\dist\locales\bootstrap-datepicker.kk.min.js" />
+    <Content Include="datetimepicker\dist\locales\bootstrap-datepicker.km.min.js" />
+    <Content Include="datetimepicker\dist\locales\bootstrap-datepicker.ko.min.js" />
+    <Content Include="datetimepicker\dist\locales\bootstrap-datepicker.kr.min.js" />
+    <Content Include="datetimepicker\dist\locales\bootstrap-datepicker.lt.min.js" />
+    <Content Include="datetimepicker\dist\locales\bootstrap-datepicker.lv.min.js" />
+    <Content Include="datetimepicker\dist\locales\bootstrap-datepicker.me.min.js" />
+    <Content Include="datetimepicker\dist\locales\bootstrap-datepicker.mk.min.js" />
+    <Content Include="datetimepicker\dist\locales\bootstrap-datepicker.mn.min.js" />
+    <Content Include="datetimepicker\dist\locales\bootstrap-datepicker.ms.min.js" />
+    <Content Include="datetimepicker\dist\locales\bootstrap-datepicker.nb.min.js" />
+    <Content Include="datetimepicker\dist\locales\bootstrap-datepicker.nl-BE.min.js" />
+    <Content Include="datetimepicker\dist\locales\bootstrap-datepicker.nl.min.js" />
+    <Content Include="datetimepicker\dist\locales\bootstrap-datepicker.no.min.js" />
+    <Content Include="datetimepicker\dist\locales\bootstrap-datepicker.oc.min.js" />
+    <Content Include="datetimepicker\dist\locales\bootstrap-datepicker.pl.min.js" />
+    <Content Include="datetimepicker\dist\locales\bootstrap-datepicker.pt-BR.min.js" />
+    <Content Include="datetimepicker\dist\locales\bootstrap-datepicker.pt.min.js" />
+    <Content Include="datetimepicker\dist\locales\bootstrap-datepicker.ro.min.js" />
+    <Content Include="datetimepicker\dist\locales\bootstrap-datepicker.rs-latin.min.js" />
+    <Content Include="datetimepicker\dist\locales\bootstrap-datepicker.rs.min.js" />
+    <Content Include="datetimepicker\dist\locales\bootstrap-datepicker.ru.min.js" />
+    <Content Include="datetimepicker\dist\locales\bootstrap-datepicker.si.min.js" />
+    <Content Include="datetimepicker\dist\locales\bootstrap-datepicker.sk.min.js" />
+    <Content Include="datetimepicker\dist\locales\bootstrap-datepicker.sl.min.js" />
+    <Content Include="datetimepicker\dist\locales\bootstrap-datepicker.sq.min.js" />
+    <Content Include="datetimepicker\dist\locales\bootstrap-datepicker.sr-latin.min.js" />
+    <Content Include="datetimepicker\dist\locales\bootstrap-datepicker.sr.min.js" />
+    <Content Include="datetimepicker\dist\locales\bootstrap-datepicker.sv.min.js" />
+    <Content Include="datetimepicker\dist\locales\bootstrap-datepicker.sw.min.js" />
+    <Content Include="datetimepicker\dist\locales\bootstrap-datepicker.th.min.js" />
+    <Content Include="datetimepicker\dist\locales\bootstrap-datepicker.tr.min.js" />
+    <Content Include="datetimepicker\dist\locales\bootstrap-datepicker.uk.min.js" />
+    <Content Include="datetimepicker\dist\locales\bootstrap-datepicker.vi.min.js" />
+    <Content Include="datetimepicker\dist\locales\bootstrap-datepicker.zh-CN.min.js" />
+    <Content Include="datetimepicker\dist\locales\bootstrap-datepicker.zh-TW.min.js" />
+    <Content Include="FrmReport.aspx" />
+    <Content Include="js\alex-date-time.js" />
+    <Content Include="js\bootstrap.file-input.js" />
+    <Content Include="js\dist\bs-pagination.min.css" />
+    <Content Include="js\dist\pagination.min.css" />
+    <Content Include="js\dist\pagination.min.js" />
+    <Content Include="js\html5csv.js" />
+    <Content Include="js\jquery-1.10.2.min.js" />
+    <Content Include="js\jquery-1.11.0.min.js" />
+    <Content Include="js\jquery-ui.min.js" />
+    <Content Include="js\jquery.paginate.js" />
+    <Content Include="js\jsCookie.js" />
+    <Content Include="js\jsDateTime.js" />
+    <Content Include="js\jsDepartment.js" />
+    <Content Include="js\jsMaster.js" />
+    <Content Include="js\selectize.js-master\dist\css\selectize.bootstrap2.css" />
+    <Content Include="js\selectize.js-master\dist\css\selectize.bootstrap3.css" />
+    <Content Include="js\selectize.js-master\dist\css\selectize.css" />
+    <Content Include="js\selectize.js-master\dist\css\selectize.default.css" />
+    <Content Include="js\selectize.js-master\dist\css\selectize.legacy.css" />
+    <Content Include="js\selectize.js-master\dist\js\selectize.js" />
+    <Content Include="js\selectize.js-master\dist\js\selectize.min.js" />
+    <Content Include="js\selectize.js-master\dist\js\standalone\selectize.js" />
+    <Content Include="js\selectize.js-master\dist\js\standalone\selectize.min.js" />
+    <Content Include="ReportForm252GetByCon.aspx" />
+    <Content Include="ReportForm253GetByCon.aspx" />
+    <Content Include="ReportForm254GetByCon.aspx" />
+    <Content Include="Report\frmReportsPreview.aspx" />
+    <Compile Include="App_Start\Config.vb" />
+    <Compile Include="Default.aspx.vb">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.designer.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrmReport.aspx.vb">
+      <DependentUpon>FrmReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Models\DATASETREPORT.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DATASETREPORT.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ILL_P028.vb" />
+    <Compile Include="Models\ILL_P029.vb" />
+    <Compile Include="Models\ILL_P030.vb" />
+    <Compile Include="Models\OPER_ILL_P028.vb" />
+    <Compile Include="Models\OPER_ILL_P029.vb" />
+    <Compile Include="Models\OPER_ILL_P030.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ReportForm252GetByCon.aspx.designer.vb">
+      <DependentUpon>ReportForm252GetByCon.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForm252GetByCon.aspx.vb">
+      <DependentUpon>ReportForm252GetByCon.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ReportForm253GetByCon.aspx.designer.vb">
+      <DependentUpon>ReportForm253GetByCon.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForm253GetByCon.aspx.vb">
+      <DependentUpon>ReportForm253GetByCon.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ReportForm254GetByCon.aspx.designer.vb">
+      <DependentUpon>ReportForm254GetByCon.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForm254GetByCon.aspx.vb">
+      <DependentUpon>ReportForm254GetByCon.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Report\frmReportsPreview.aspx.vb">
+      <DependentUpon>frmReportsPreview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\ILLR8301.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ILLR8301.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ILLR8314.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ILLR8314.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ILLR8315.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ILLR8315.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ILL_P028.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ILL_P028.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ILL_P029.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ILL_P029.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ILL_P030.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ILL_P030.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Settings.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ILLR8301.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ILLR8301.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ILLR8314.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ILLR8314.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ILLR8315.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ILLR8315.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ILL_P028.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ILL_P028.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ILL_P029.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ILL_P029.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ILL_P030.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ILL_P030.vb</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\css\demo.css.map" />
+    <None Include="assets\css\main.css.map" />
+    <None Include="assets\vendor\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="assets\vendor\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="assets\vendor\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="assets\vendor\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="assets\vendor\chartist\css\chartist-custom.css.map" />
+    <None Include="assets\vendor\chartist\map\chartist.css.map" />
+    <None Include="assets\vendor\chartist\map\chartist.min.js.map" />
+    <None Include="assets\vendor\chartist\scss\chartist.scss" />
+    <None Include="assets\vendor\font-awesome\fonts\fontawesome-webfont.eot" />
+    <None Include="assets\vendor\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <None Include="assets\vendor\font-awesome\fonts\fontawesome-webfont.woff" />
+    <None Include="assets\vendor\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <None Include="assets\vendor\font-awesome\fonts\FontAwesome.otf" />
+    <None Include="assets\vendor\jquery\jquery.min.map" />
+    <None Include="assets\vendor\linearicons\fonts\Linearicons-Free.eot" />
+    <None Include="assets\vendor\linearicons\fonts\Linearicons-Free.ttf" />
+    <None Include="assets\vendor\linearicons\fonts\Linearicons-Free.woff" />
+    <None Include="assets\vendor\linearicons\fonts\Linearicons-Free.woff2" />
+    <None Include="datetimepicker\bootstrap-3.3.7-dist\css\bootstrap-theme.css.map" />
+    <None Include="datetimepicker\bootstrap-3.3.7-dist\css\bootstrap-theme.min.css.map" />
+    <None Include="datetimepicker\bootstrap-3.3.7-dist\css\bootstrap.css.map" />
+    <None Include="datetimepicker\bootstrap-3.3.7-dist\css\bootstrap.min.css.map" />
+    <None Include="datetimepicker\bootstrap-3.3.7-dist\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="datetimepicker\bootstrap-3.3.7-dist\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="datetimepicker\bootstrap-3.3.7-dist\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="datetimepicker\bootstrap-3.3.7-dist\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="datetimepicker\dist\css\bootstrap-datepicker.css.map" />
+    <None Include="datetimepicker\dist\css\bootstrap-datepicker.standalone.css.map" />
+    <None Include="datetimepicker\dist\css\bootstrap-datepicker3.css.map" />
+    <None Include="datetimepicker\dist\css\bootstrap-datepicker3.standalone.css.map" />
+    <None Include="js\selectize.js-master\dist\less\plugins\drag_drop.less" />
+    <None Include="js\selectize.js-master\dist\less\plugins\dropdown_header.less" />
+    <None Include="js\selectize.js-master\dist\less\plugins\optgroup_columns.less" />
+    <None Include="js\selectize.js-master\dist\less\plugins\remove_button.less" />
+    <None Include="js\selectize.js-master\dist\less\selectize.bootstrap2.less" />
+    <None Include="js\selectize.js-master\dist\less\selectize.bootstrap3.less" />
+    <None Include="js\selectize.js-master\dist\less\selectize.default.less" />
+    <None Include="js\selectize.js-master\dist\less\selectize.legacy.less" />
+    <None Include="js\selectize.js-master\dist\less\selectize.less" />
+    <None Include="Models\DATASETREPORT.xsc">
+      <DependentUpon>DATASETREPORT.xsd</DependentUpon>
+    </None>
+    <None Include="Models\DATASETREPORT.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DATASETREPORT.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Models\DATASETREPORT.xss">
+      <DependentUpon>DATASETREPORT.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>2292</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

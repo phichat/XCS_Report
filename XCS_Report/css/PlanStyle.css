@@ -1,0 +1,82 @@
+﻿.panel_img
+{
+    position:relative !important;
+}
+
+/* Immigation */
+.group_plan
+{
+    position:absolute;
+    color:white;
+    font-weight:bold;
+    text-align:center;
+}
+
+.panel-green
+{
+    position:absolute;
+    background-color:limegreen;
+    /*background-color:transparent;*/
+    width:40px;
+    height:25px;
+    font-size:16px;
+}
+
+.panel-blue
+{
+    position:absolute;
+    background-color:deepskyblue;
+    /*background-color:transparent;*/
+    width:40px;
+    height:25px;
+    font-size:16px;
+}
+
+.panel-red
+{
+    position:absolute;
+    width:40px;
+    height:25px;
+    left:40px;
+    background-color:red;
+    /*background-color:transparent;*/
+    font-size:16px;
+}
+
+.panel-red-2
+{
+    position:absolute;
+    width:40px;
+    height:25px;
+    top:25px;
+    background-color:red;
+    /*background-color:transparent;*/
+    font-size:16px;
+}
+
+.panel-yello
+{
+    position:absolute;
+    /*background-color:limegreen;*/
+    background-image: url("../Images/attention_PNG11.png");
+    background-repeat: no-repeat;
+    background-size: contain, cover;
+    width:30px;
+    top:-30px;
+    height:30px;
+    font-size:16px;
+}
+
+.panel-yello-2
+{
+    position:absolute;
+    /*background-color:limegreen;*/
+    background-image: url("../Images/attention_PNG11.png");
+    background-repeat: no-repeat;
+    background-size: contain, cover;
+    width:30px;
+    top:22px;
+    height:30px;
+    font-size:11px;
+    display:none;
+}
